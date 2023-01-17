@@ -4,32 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encriptador de Texto</title>
+    <title>HideCluer - Secure your Secrets </title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body class="body">
-    <div class="nav">
-        <img src="assets/Logo.png" alt="no image">
-    </div>
-    <section id="text">
-        <textarea name="in-text" id="in-text" cols="30" rows="10" placeholder="Ingrese texto aqui" autofocus></textarea>
-        <p><img src="assets/i-icon.png" alt="no image"> solo letras minuscula y sin acentos</p>
-        <div>
-            <div>
-                <button>Encriptar</button>
+    <section class="container" >
+        <div class="left">
+            <img class="logo" src="assets/logo.png" alt="no image">
+            <div class="text_board">
+                <textarea class="text_input" id="text_input" placeholder="Ingrese el texto aqui" autofocus></textarea>
+                <p class="inf"><img src="assets/i-icon.png" alt="no image">Solo letras minuscula y sin acentos</p>
             </div>
-            <div>
-                <button>Desencriptar</button>
+            <div class="buttom_board">
+                <button type="button" class="b-encriptor" onclick=encript()>Encriptar</button>
+                <button type="button" class="b-desencriptor" onclick=desencript()>Desencriptar</button>
             </div>
         </div>
-    </section>
-    <section id="image">
-        <div id="rectangule-area">
-            <img src="assets/Muñeco.png" alt="no image">
+        <div class="rigth">
+            <div id="empty_message"> 
+                <img class="image" src="assets/toon.png" alt="no image">
+                <h1 id="text_empty">Ningun mensaje fue encontrado</h1>
+                <h1 id="text_copied">Has copiado el texto</h1>
+                <p id="text_subtitle">Ingresa el texto que desees encriptar o desencriptar</p>
+            </div>
+
+            <div id="fill_message"> 
+                <p class="text_result" id="text_result"></p>
+                <button type="button" class="b-copy" id="b-copy" onclick=copy()>Copiar</button>
+            </div>
         </div>
-        <h1>Ningun mensaje fue encontrado</h1>
-        <p>Ingresa el texto que desees encriptar o desencriptar</p>
-        <div><button id="copiar">Copiar</button></div>
     </section>
 </body>
 <script src="script.js"></script>

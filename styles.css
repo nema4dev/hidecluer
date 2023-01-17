@@ -1,8 +1,292 @@
-.body{
-    background-color:  #F3F5FC;
+.body {
+  background-color: #f3f5fc;
 }
 
-.nav{
-    width: 10;
-    height: 10;
+.logo {
+  width: 120px;
+  height: 120px;
+}
+
+.container {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  padding: 4px;
+  display: flex;
+}
+
+.left {
+  float: left;
+  width: 75%;
+  height: 800px;
+  top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.text_board {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.text_input {
+  float: inherit;
+  margin-left: 5%;
+  width: 95%;
+  height: 680px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  background-color: #f3f5fc;
+}
+
+.inf {
+  width: 250px;
+  height: 18px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #495057;
+  opacity: 0.8;
+  margin-right: 4%;
+}
+
+.buttom_board {
+  flex: auto;
+  display: flex;
+  margin-left: 38%;
+}
+
+.image {
+  position: auto;
+  width: 306px;
+  height: 274px;
+  left: 1032px;
+  top: 283px;
+}
+
+.rigth {
+  float: right;
+  width: 25%;
+  height: 960px;
+  top: 40px;
+
+  background: #ffffff;
+
+  margin-right: 2%;
+  margin-left: 2%;
+
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  border-radius: 32px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+#empty_message {
+  margin-top: 40%;
+  margin-left: 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#fill_message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  margin-top: 25%;
+}
+
+#text_empty {
+  width: 336px;
+  height: 58px;
+
+  margin-top: 1em;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+
+  text-align: center;
+  margin-left: 10%;
+
+  color: #343a40;
+
+  display: none;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  margin-top: 20%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#text_copied {
+  width: 336px;
+  height: 58px;
+
+  margin-top: 1em;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+
+  text-align: center;
+  margin-left: 10%;
+
+  color: #343a40;
+
+  display: none;
+  
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  margin-top: 20%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#text_subtitle {
+  width: 336px;
+  height: 48px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+
+  text-align: center;
+
+  color: #495057;
+
+  margin-left: 10%;
+
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.text_result {
+  width: 390px;
+  height: 690px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+
+  
+  color: #495057;
+
+  margin-top: 5%;
+
+  border: none;
+  outline: none;
+}
+
+.b-encriptor {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 16px;
+  gap: 8px;
+
+  width: 250px;
+  height: 49px;
+
+  background: #0a3871;
+  border-radius: 20px;
+
+  flex: auto;
+  order: 1;
+  flex-grow: 0;
+
+  font-family: "Inter Thin";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+
+  color: #ffffff;
+
+  margin-right: 2%;
+}
+
+.b-desencriptor {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 16px;
+  gap: 8px;
+
+  width: 250px;
+  height: 49px;
+
+  background: #d8dfe8;
+
+  border: 1px solid #0a3871;
+  border-radius: 20px;
+
+  flex: auto;
+  order: 1;
+  flex-grow: 0;
+
+  font-family: "Inter Thin";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+}
+
+.b-copy {
+  box-sizing: border-box;
+
+  flex-direction: row;
+  justify-content: center;
+  padding: 16px;
+  gap: 8px;
+
+  width: 225px;
+  height: 10px;
+
+  background: #d8dfe8;
+  border: 1px solid #0a3871;
+  border-radius: 20px;
+
+  flex: content;
+  order: 1;
+  flex-grow: 0;
+
+  font-family: "Inter Thin";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
 }
