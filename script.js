@@ -1,43 +1,23 @@
-const encript_rules = (text) => {
-  var encripted = "";
-  for (var i = 0; i < text.length; i++) {
-    if (text[i] == "a") {
-      encripted += "ai";
-    } else if (text[i] == "e") {
-      encripted += "enter";
-    } else if (text[i] == "i") {
-      encripted += "imes";
-    } else if (text[i] == "o") {
-      encripted += "ober";
-    } else if (text[i] == "u") {
-      encripted += "ufat";
-    } else {
-      encripted += text[i];
+const encriptMessage = (text) => {
+  let encript_rules =[["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
+  var encripted = text.toLowerCase();
+
+  for(let i = 0; i < encript_rules.length; i++){
+    if(encripted.includes(encript_rules[i][0])){
+        encripted = encripted.replaceAll(encript_rules[i][0], encript_rules[i][1])
     }
   }
+  console.log(encripted);
   return encripted;
 };
 
-const desencript_rules = (text) => {
-  var desencripted = "";
-  for (var i = 0; i < text.length; i++) {
-    if (text[i] == "a") {
-      desencripted += "a";
-      i = i+1;
-    } else if (text[i] == "e") {
-      desencripted += "e";
-      i = i+4;
-    } else if (text[i] == "i") {
-      desencripted += "i";
-      i = i+3;
-    } else if (text[i] == "o") {
-      desencripted += "o";
-      i = i+3;
-    } else if (text[i] == "u") {
-      desencripted += "u";
-      i = i+3;
-    } else {
-      desencripted += text[i];
+const desencriptMessage = (text) => {
+  let desencript_rules =[["enter", "e"], ["imes", "i"], ["ai", "i"], ["ober", "o"], ["ufat", "u"]];
+  var desencripted = text.toLowerCase();
+
+  for(let i = 0; i < desencript_rules.length; i++){
+    if(desencripted.includes(desencript_rules[i][0])){
+      desencripted = desencripted.replaceAll(desencript_rules[i][0], desencript_rules[i][1])
     }
   }
   return desencripted;
@@ -58,7 +38,7 @@ function showMessage(message){
 
 function encript() {
   var text = document.getElementById("text_input");
-  var encripted = encript_rules(text.value.toLowerCase());
+  var encripted = encriptMessage(text.value);
 
   if (!text.value) {
     hideEmpty();
@@ -69,7 +49,7 @@ function encript() {
 
 function desencript() {
   var text = document.getElementById("text_input");
-  var desencripted = desencript_rules(text.value.toLowerCase());
+  var desencripted = desencriptMessage(text.value);
 
   if (!text.value) {
     hideEmpty();
