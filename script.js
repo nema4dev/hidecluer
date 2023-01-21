@@ -12,7 +12,7 @@ const encriptMessage = (text) => {
 };
 
 const desencriptMessage = (text) => {
-  let desencript_rules =[["enter", "e"], ["imes", "i"], ["ai", "i"], ["ober", "o"], ["ufat", "u"]];
+  let desencript_rules =[["enter", "e"], ["imes", "i"], ["ai", "a"], ["ober", "o"], ["ufat", "u"]];
   var desencripted = text.toLowerCase();
 
   for(let i = 0; i < desencript_rules.length; i++){
